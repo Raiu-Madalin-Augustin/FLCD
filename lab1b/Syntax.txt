@@ -1,0 +1,37 @@
+Syntax:
+<program> ::= $ <decllist> cmpdstmt $
+
+<decllist> ::= <declaration> | <declaration>;<decllist>
+<declaration> ::= var IDENTIFIER : <type1>
+<type> ::= <type1> | arraydecl | listdecl
+<type1> ::= BOOLEAN | CHAR | INTEGER | REAL
+
+<arraydecl> ::= var IDENTIFIER : ARRAY["nr"] : <type1>
+<listdecl> ::= var IDENTIFIER : LIST["nr"] : <type1>
+
+<iostmt> ::= READ IDENTIFIER | SHOW IDENTIFIER 
+
+<ifstmt> ::= IF <condition> => <stmt> ELSE => <stmt>
+<whilestmt> ::= WHILE <condition> => <stmt>
+<forstmt> ::= FOR <assignstmt> ; IDENTIFIER <relation> IDENTIFIER; IDENTIFIER <expression> => <stmt>
+
+<assignstmt> ::= IDENTIFIER = <expression>
+<stmt> ::= <simplstmt>|<structstmt>
+
+<simplstmt> ::= <assignstmt>|<iostmt>
+
+<assignstmt> ::= IDENTIFIER = <expression>
+
+<expression> ::= <expression> "+" <term> | <expresion> "-" <term> | <term>
+
+<term> ::= <term> "*" <factor>|<factor>
+
+<factor> ::= <expression> | <expression>  IDENTIFIER
+
+
+<structstmt> ::= <forstmt> | <ifstmt> | <whilestmt>
+
+<condition> ::= <expression> <relation> <expression>
+
+<relation> ::= < | <= | == | > | >= | !=
+
