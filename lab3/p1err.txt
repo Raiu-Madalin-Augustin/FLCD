@@ -1,0 +1,24 @@
+$
+ var x:int;
+ var y:int;
+ var z:int;
+ var max:int = 0;
+ Read(x);
+ Read(y);
+ Read(z);
+/*this is a lexical error
+ Verify(x >= y && x >= z) =>
+ {
+    max = x;
+ }else
+ Verify(y>=x && y>=z )=>
+ {
+    max = y;
+ }else =>
+ {
+    max = z;
+ }
+
+ Show("The max is:, max);
+
+$

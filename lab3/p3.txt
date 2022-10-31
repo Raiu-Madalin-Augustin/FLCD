@@ -1,0 +1,14 @@
+$
+ var sum:int = 0;
+ var aux:int;
+ var n:int;
+ var i:int=0;
+ var myList:list[];
+ Read(n);
+ for(i = 0; i< n; i++ )=>
+ {
+    Read(aux);
+    sum+=aux;
+ }
+ Show(sum);
+$

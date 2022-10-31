@@ -1,0 +1,18 @@
+$
+ var x:int;
+ var isPrime:bool =true ;
+ Read(x);
+ Verify(x <= 0 ) =>{
+ isPrime = false;
+ }else Verify(x == 1)=>{
+ isPrime = false;
+ }
+ for(i = 2; i<= rad(x); i++)=>
+ {
+    Verify(x % i == 0)=>
+    {
+        isPrime = false;
+    }
+ }
+ Show(isPrime);
+$
