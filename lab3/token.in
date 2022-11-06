@@ -8,13 +8,15 @@ var
 bool
 true
 false
-verify
+Verify
 else
 Read
 Show
 for
-while 
+while
+rad
 +
+++
 -
 *
 /
@@ -40,5 +42,6 @@ while
 space
 :
 =>
-"
 '
+,
+$
