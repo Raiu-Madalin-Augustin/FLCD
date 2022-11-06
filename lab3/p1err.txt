@@ -19,6 +19,6 @@ $
     max = z;
  }
 
- Show("The max is:, max);
+ Show('The max is:, max);
 
 $

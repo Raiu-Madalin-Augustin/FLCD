@@ -9,3 +9,4 @@ class PIF:
         text = ""
         for pair in self.__pairs:
             text += pair[0] + "->" + str(pair[1]) + "\n"
+        return text

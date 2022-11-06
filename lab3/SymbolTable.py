@@ -32,15 +32,16 @@ class HashTable:
 
     def getIndex(self, value):
         key = self.__hash(value)
-        return self.table[key].index(value)
+        return key, self.table[key].index(value)
 
     def __str__(self):
         string = ""
         hashValue = 0
         for i in self.table:
+            string = string + str(hashValue) + " => "
             for keyword in i:
-                string = string + "(" + str(hashValue) + "," + str(self.getIndex(keyword)) + ") : " + str(
-                    keyword) + "\n"
+                string = string + "(" + str(hashValue) + "," + str(self.getIndex(keyword)[1]) + ") : " + str(
+                    keyword) + ", "
             hashValue += 1
             string = string + "\n"
 
