@@ -7,7 +7,7 @@ if __name__ == "__main__":
     pif = PIF()
     scanner = Scanner()
 
-    program = "p1err.txt"
+    program = "p1.txt"
     exception = ""
     scanner.read_tokens()
     print(scanner.get_all())
