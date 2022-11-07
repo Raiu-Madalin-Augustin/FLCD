@@ -1,6 +1,6 @@
 $
  var x:int;
- var y:int;
+ var x:int;
  var z:int;
  var max:int = 0;
  Read(x);

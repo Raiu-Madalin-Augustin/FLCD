@@ -64,7 +64,8 @@ class Scanner:
             tokens.append(token)
         return tokens
 
-    def _string(self, token, tokens, line, i):
+    @staticmethod
+    def _string(token, tokens, line, i):
         if len(token) > 0:
             tokens.append(token)
         token = '\''
@@ -91,7 +92,8 @@ class Scanner:
         token = ''
         return token, tokens, i
 
-    def _separator(self, token, tokens, line, i):
+    @staticmethod
+    def _separator(token, tokens, line, i):
         if len(token) > 0:
             tokens.append(token)
         token = line[i]
