@@ -38,7 +38,7 @@ if __name__ == '__main__':
             print(fa.is_dfa())
 
         elif option == "7":
-            pass
+            print(fa.is_accepted_by_fa())
 
         elif option == "8":
             break

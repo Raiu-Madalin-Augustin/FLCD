@@ -35,6 +35,19 @@ class FA:
                 return False
         return True
 
+    def is_accepted_by_fa(self, sequence):
+        if self.is_dfa():
+            start = self.q0
+            for c in sequence:
+                if (start, c) in self.T.keys():
+                    start = self.T[(start, c)][0]
+                else:
+                    return False
+            if start in self.F:
+                return True
+
+        return False
+
     def __str__(self):
         T = ""
         for (origin, path) in self.T.keys():
