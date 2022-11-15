@@ -38,7 +38,13 @@ if __name__ == '__main__':
             print(fa.is_dfa())
 
         elif option == "7":
-            print(fa.is_accepted_by_fa())
+            if fa.is_dfa():
+                sequence = input("Input sequence: ")
+                print(fa.is_accepted_by_fa(sequence.split(",")))
+            else:
+                print("its not a dfa")
 
         elif option == "8":
             break
+        else:
+            print("option is not valid")
