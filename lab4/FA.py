@@ -28,6 +28,8 @@ class FA:
                         self.T[(origin, path)].append(target)
                     else:
                         self.T[(origin, path)] = [target]
+            if not self.is_fa_valid():
+                raise Exception("Error in input file!")
 
     def is_dfa(self):
         for key in self.T.keys():
@@ -47,6 +49,22 @@ class FA:
                 return True
 
         return False
+
+    def is_fa_valid(self):
+        if self.q0 not in self.Q:
+            return False
+        for final in self.F:
+            if final not in self.Q:
+                return False
+        for (origin, path) in self.T.keys():
+            if origin not in self.Q:
+                return False
+            if path not in self.E:
+                return False
+            for target in self.T[(origin, path)]:
+                if target not in self.Q:
+                    return False
+        return True
 
     def __str__(self):
         T = ""
