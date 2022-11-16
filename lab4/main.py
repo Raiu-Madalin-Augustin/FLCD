@@ -40,7 +40,11 @@ if __name__ == '__main__':
         elif option == "7":
             if fa.is_dfa():
                 sequence = input("Input sequence: ")
-                print(fa.is_accepted_by_fa(sequence.split(",")))
+                split_sequence = sequence.split(",")
+                if len(split_sequence) == 1:
+                    print(fa.check_if_null(len(split_sequence)))
+                else:
+                    print(fa.is_accepted_by_fa(split_sequence))
             else:
                 print("its not a dfa")
 

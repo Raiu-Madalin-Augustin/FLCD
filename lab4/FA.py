@@ -50,6 +50,11 @@ class FA:
 
         return False
 
+    def check_if_null(self, count):
+        if self.q0 in self.F:
+            return True
+        return False
+
     def is_fa_valid(self):
         if self.q0 not in self.Q:
             return False
