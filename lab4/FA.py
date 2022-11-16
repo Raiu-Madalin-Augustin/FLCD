@@ -50,7 +50,7 @@ class FA:
 
         return False
 
-    def check_if_null(self, count):
+    def check_if_null(self):
         if self.q0 in self.F:
             return True
         return False
