@@ -42,7 +42,7 @@ if __name__ == '__main__':
                 sequence = input("Input sequence: ")
                 split_sequence = sequence.split(",")
                 if len(split_sequence) == 1:
-                    print(fa.check_if_null(len(split_sequence)))
+                    print(fa.check_if_null())
                 else:
                     print(fa.is_accepted_by_fa(split_sequence))
             else:
