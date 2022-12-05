@@ -1,0 +1,38 @@
+decllist- D
+declaration -L
+type- T
+type1- Z
+listdecl- I
+arraydecl - R
+iostmt - O
+ifstmt -F
+condition - C
+stmt - S
+whilestmt - W
+forstmt - Q
+assignstmt - A
+relation - U
+expresion - E
+simplstmt - N
+structstmt - X
+term - M
+
+P -> $ D $
+
+D -> L | L;D
+L -> var IDENTIFIER : Z
+T -> Z | R | I
+Z -> BOOLEAN | CHAR | INTEGER | REAL
+R -> var IDENTIFIER: ARRA["nr"] : Z 
+I -> var IDENTIFIER: LIST["nr"]: Z
+O -> READ IDENTIFIER | SHOW IDENTIFIER
+F -> IF C => S ELSE => S
+W -> WHILE C => S
+Q ->  FOR A ; IDENTIFIER U IDENTIFIER; IDENTIFIER  E => S
+A -> IDENTIFIER = E
+S -> N | X
+N -> A | O
+E -> E + M | E - M | M
+
+
+
