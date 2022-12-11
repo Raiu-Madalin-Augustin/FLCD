@@ -16,6 +16,7 @@ expresion - E
 simplstmt - N
 structstmt - X
 term - M
+factor - K
 
 P -> $ D $
 
@@ -34,5 +35,12 @@ S -> N | X
 N -> A | O
 E -> E + M | E - M | M
 
+M -> M * K| K
+K -> E | E IDENTIFIER
+
+X -> Q | F | W
+
+C -> E U E
+U -> < | <= | == | > | >= | !=
 
 
